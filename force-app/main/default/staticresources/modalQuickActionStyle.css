@@ -1,0 +1,16 @@
+.slds-modal__container{
+    width:40% !important;
+    max-width:40% !important;
+    height:100% !important;
+    max-height:100% !important;
+}
+.slds-modal__content{
+    overflow-y:hidden !important;
+    height:unset !important;
+    max-height:unset !important;
+}
+
+.slds-text-heading_small, .slds-text-heading--small{
+    font-size: var(--lwc-fontSize2,0.75rem);
+    font-weight: 600;
+}

@@ -1,0 +1,21 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">    
+   
+<ltng:require styles="{!$Resource.modalQuickActionStyle}"></ltng:require>
+
+<aura:attribute name="recordId" type="String"/>
+    <div style="padding: 0.50rem 1rem;">
+        <lightning:recordEditForm objectApiName="Account" recordId="{!v.recordId}" onsuccess="{!c.handleSuccess}">
+            
+            <lightning:messages class="slds-text-body_small"/>  
+            <div style="height: 200px">
+                <lightning:inputField fieldName="Name" />
+                <lightning:inputField fieldName="Type" />
+                <lightning:inputField fieldName="AccountNumber" />        
+            </div>
+            <footer class="slds-modal__footer" >
+                <lightning:button label="Cancel" onclick="{!c.handleCancel}" variant="neutral"/>
+                <lightning:button type="submit" label="Save" variant="brand"/>
+            </footer>  
+        </lightning:recordEditForm>
+    </div>
+</aura:component>
